@@ -153,6 +153,9 @@ main{min-height:60vh;padding-bottom:96px}
 /* poster art */
 .poster{position:relative;overflow:hidden;border-radius:var(--r);aspect-ratio:3/4;color:#fff;isolation:isolate}
 .poster .shape{position:absolute;border-radius:50%;z-index:-1}
+.poster .p-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.poster .p-scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.62) 100%)}
+.tk-top .p-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.55}
 .poster .p-region{position:absolute;top:12px;left:12px}
 .poster .p-title{position:absolute;left:14px;right:14px;bottom:14px;font-weight:900;font-size:19px;line-height:1.25;letter-spacing:-.4px}
 .poster .p-eng{display:block;font-family:var(--f-logo);font-size:11px;letter-spacing:1.5px;opacity:.8;margin-bottom:6px;font-weight:700}
@@ -510,17 +513,17 @@ const VENUE={
  ulsan:{ko:"AXI 이머시브 울산",en:"AXI Immersive Ulsan"}};
 const PRICES=(a,y,c)=>[{k:"adult",n:{ko:"성인",en:"Adult",ja:"大人",zh:"成人"},p:a},{k:"youth",n:{ko:"청소년",en:"Youth",ja:"青少年",zh:"青少年"},p:y},{k:"child",n:{ko:"어린이",en:"Child",ja:"子ども",zh:"儿童"},p:c}];
 const CONTENTS=[
- {id:"lumen",region:"seoul",cat:"immersive",tags:["couple","friends"],type:"slot",dur:60,rating:4.8,rev:128,pop:98,isNew:false,
+ {id:"lumen",img:"img/lumen.jpg",imgPos:"50% 60%",region:"seoul",cat:"immersive",tags:["couple","friends"],type:"slot",dur:60,rating:4.8,rev:128,pop:98,isNew:false,
   title:{ko:"루멘 서울: 빛의 정원",en:"LUMEN SEOUL: Garden of Light",ja:"ルーメン・ソウル:光の庭",zh:"LUMEN首尔:光之花园"},eng:"LUMEN SEOUL",
   sub:{ko:"빛으로 피어나는 정원을 걷는 몰입형 미디어아트",en:"Walk through a garden that blooms in light"},
   c1:"#16307A",c2:"#F2C14E",c3:"#5B8CFF",prices:PRICES(24000,20000,16000),period:"2026-11-01 ~ 2027-03-01",goods:["g1","g2"],fnb:["f1"],
   points:{ko:["12개 공간을 잇는 60분 동선","관람객 움직임에 반응하는 인터랙티브 바닥","매 회차 정원 40명으로 쾌적한 관람"],en:["60-minute route through 12 rooms","Floors that react to your steps","Max 40 visitors per slot"]}},
- {id:"deepblue",region:"seoul",cat:"immersive",tags:["family","friends"],type:"slot",dur:50,rating:4.7,rev:86,pop:90,isNew:true,
+ {id:"deepblue",img:"img/deepblue.jpg",imgPos:"50% 50%",region:"seoul",cat:"immersive",tags:["family","friends"],type:"slot",dur:50,rating:4.7,rev:86,pop:90,isNew:true,
   title:{ko:"딥 블루: 심해 이머시브",en:"DEEP BLUE: Into the Abyss",ja:"ディープブルー:深海イマーシブ",zh:"深蓝:深海沉浸展"},eng:"DEEP BLUE",
   sub:{ko:"수심 4,000m 아래, 빛을 내는 생물들과의 만남",en:"Meet the glowing creatures 4,000 m below"},
   c1:"#063B4C",c2:"#3EE6C1",c3:"#0E7490",prices:PRICES(22000,18000,15000),period:"2026-10-15 ~ 2027-02-28",goods:["g2"],fnb:["f4"],
   points:{ko:["어린이 눈높이 해설 오디오 가이드","대형 LED 수조 미디어월","포토존 5곳"],en:["Kids' audio guide","Giant LED aquarium wall","5 photo spots"]}},
- {id:"king",region:"jeonju",cat:"immersive",tags:["family","couple"],type:"slot",dur:70,rating:4.9,rev:64,pop:95,isNew:true,
+ {id:"king",img:"img/king.jpg",imgPos:"28% 50%",region:"jeonju",cat:"immersive",tags:["family","couple"],type:"slot",dur:70,rating:4.9,rev:64,pop:95,isNew:true,
   title:{ko:"왕의 도시: 후백제에서 조선까지",en:"City of Kings: From Hubaekje to Joseon",ja:"王の都:後百済から朝鮮へ",zh:"王之城:从后百济到朝鲜"},eng:"CITY OF KINGS",
   sub:{ko:"전주에서 시작된 두 왕조의 이야기를 걷는 역사 이머시브",en:"Walk through the story of two dynasties born in Jeonju"},
   c1:"#6B1E0E",c2:"#E8B44A",c3:"#B4471F",prices:PRICES(26000,22000,18000),period:"2026-12-01 ~ 2027-06-30",goods:["g3","g2"],fnb:["f2"],
@@ -530,7 +533,7 @@ const CONTENTS=[
   sub:{ko:"해가 진 한옥마을 골목에 펼쳐지는 빛의 산책",en:"A walk of light through Hanok Village at night"},
   c1:"#24215E",c2:"#FF9F6B",c3:"#4F46E5",prices:PRICES(15000,12000,9000),period:"2026-11-01 ~ 2027-04-30",goods:["g3"],fnb:["f2"],
   points:{ko:["운영기간 중 원하는 날 19~22시 자유 입장","골목 8곳의 미디어 파사드","재입장 불가"],en:["Any evening 7–10 pm during the run","Media facades in 8 alleys","No re-entry"]}},
- {id:"manpa",region:"ulsan",cat:"immersive",tags:["family","couple"],type:"slot",dur:60,rating:4.8,rev:93,pop:92,isNew:false,
+ {id:"manpa",img:"img/manpa.jpg",imgPos:"56% 50%",region:"ulsan",cat:"immersive",tags:["family","couple"],type:"slot",dur:60,rating:4.8,rev:93,pop:92,isNew:false,
   title:{ko:"만파식적: 바다를 잠재운 소리",en:"Manpasikjeok: The Flute That Calmed the Sea",ja:"万波息笛:海を鎮めた音",zh:"万波息笛:平息大海之声"},eng:"MANPASIKJEOK",
   sub:{ko:"신라의 피리 설화를 소리와 빛으로 다시 쓴 울산 대표 이머시브",en:"The Silla legend of the magic flute, retold in sound and light"},
   c1:"#0A3D62",c2:"#9BE7FF",c3:"#1E6FA8",prices:PRICES(24000,20000,16000),period:"2026-11-15 ~ 2027-05-31",goods:["g4"],fnb:["f3"],
@@ -573,7 +576,7 @@ const addDays=(n)=>{const d=new Date(todayD);d.setDate(d.getDate()+n);return d};
 function seed(){return{
  lang:"ko",region:"all",view:"home",detailId:null,theme:"all",cat:"all",sort:"pop",q:"",storeTab:"goods",tkTab:"up",heroIdx:0,
  booking:{date:null,slot:null,qty:{}},cart:[],coupon:"",usePoints:0,pay:"card",agree:false,lastOrder:null,scanVenue:"seoul",scanRes:null,
- member:{name:"김플레이",phone:"010-1234-5678",email:"play@example.com",grade:"GOLD",spend:612000,visits:7,visited:["seoul","ulsan"],points:12400},
+ member:{name:"힙한지혜",phone:"010-1234-5678",email:"play@example.com",grade:"GOLD",spend:612000,visits:7,visited:["seoul","ulsan"],points:12400},
  ledger:[
   {d:iso(addDays(-40)),desc:{ko:"딥 블루 입장 적립",en:"DEEP BLUE entry"},amt:2200,st:"confirmed"},
   {d:iso(addDays(-21)),desc:{ko:"만파식적 입장 적립",en:"Manpasikjeok entry"},amt:2400,st:"confirmed"},
@@ -603,6 +606,12 @@ function fmtDate(s){const d=new Date(s+"T00:00:00");const wd=(WD[S.lang]||WD.en)
 function posterHTML(o,{region=true,big=false}={}){
   const c=o.c1,a=o.c2,b=o.c3||o.c2;
   const s1=big?420:220,s2=big?260:140;
+  if(o.img)return `<div class="poster" style="background:${c}">
+    <img class="p-img" src="${o.img}" alt="" loading="lazy" style="object-position:${o.imgPos||"50% 50%"}">
+    ${o.title&&L(o.title)?`<span class="p-scrim"></span>`:""}
+    ${region&&o.region?`<span class="p-region tag dark">${esc(L(REG[o.region]))}</span>`:""}
+    <div class="p-title" style="${big?"font-size:28px":""}"><span class="p-eng">${esc(o.eng||"")}</span>${esc(L(o.title))}</div>
+  </div>`;
   return `<div class="poster" style="background:${c}">
     <span class="shape" style="width:${s1}px;height:${s1}px;right:-${s1*.35}px;top:-${s1*.25}px;background:${b};opacity:.55"></span>
     <span class="shape" style="width:${s2}px;height:${s2}px;left:-${s2*.3}px;bottom:${big?70:46}px;border:${big?3:2}px solid ${a};opacity:.9"></span>
@@ -881,7 +890,7 @@ function vTickets(){
   return `<div class="wrap"><section class="section"><div class="sec-head"><div><h2>${t("tkTitle")}</h2><p>${t("tkSub")}</p></div></div>
    <div class="utabs" style="margin-bottom:22px"><button class="${S.tkTab==="up"?"on":""}" data-act="tkTab" data-v="up">${t("upcoming")} <span class="num">${up.length}</span></button><button class="${S.tkTab==="past"?"on":""}" data-act="tkTab" data-v="past">${t("past")} <span class="num">${past.length}</span></button></div>
    ${list.length?`<div class="tk-grid">${list.map(tk=>{const c=tk.contentId?byId(tk.contentId):null;const top=c||{c1:"#2160F3",c2:"#fff",c3:"#5B8CFF"};
-    return `<article class="tk"><div class="tk-top" style="background:${top.c1}"><span class="shape" style="width:200px;height:200px;right:-60px;top:-80px;background:${top.c3||top.c2};opacity:.55"></span><span class="tag dark" style="background:rgba(0,0,0,.3)">${c?L(REG[c.region]):"3 CITY"} · ${c&&c.type==="slot"?t("slot"):t("anytime")}</span><h3 style="margin-top:10px">${esc(c?L(c.title):L(tk.title))}</h3><div class="when num">${tk.date?fmtDate(tk.date):""} ${tk.slot||""} · ${esc(L(tk.type))}</div></div>
+    return `<article class="tk"><div class="tk-top" style="background:${top.c1}">${top.img?`<img class="p-img" src="${top.img}" alt="" style="object-position:${top.imgPos}">`:""}<span class="shape" style="width:200px;height:200px;right:-60px;top:-80px;background:${top.c3||top.c2};opacity:.55"></span><span class="tag dark" style="background:rgba(0,0,0,.3)">${c?L(REG[c.region]):"3 CITY"} · ${c&&c.type==="slot"?t("slot"):t("anytime")}</span><h3 style="margin-top:10px">${esc(c?L(c.title):L(tk.title))}</h3><div class="when num">${tk.date?fmtDate(tk.date):""} ${tk.slot||""} · ${esc(L(tk.type))}</div></div>
      <div class="tk-body"><div class="qrbox ${tk.used?"used":""}"><canvas width="29" height="29" data-qr="${tk.code}" aria-label="QR ${tk.code}"></canvas><span class="cd num" data-cd>${tk.used?t("used"):""}</span></div>
       <div class="tk-meta"><span class="st ${tk.used?"used":"ready"}">${tk.used?t("used"):t("ready")}</span><span style="color:var(--muted);font-size:13px">${t("ticketNo")}</span><span class="code">${tk.code}</span><span style="color:var(--muted);font-size:13px">${t("orderNo")} <span class="num">${tk.order}</span></span>
        ${!tk.used?`<button class="btn btn-outline btn-sm" style="align-self:flex-start;margin-top:4px" data-act="share" data-v="${tk.code}">${t("share")}</button>`:""}</div></div>
