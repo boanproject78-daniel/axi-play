@@ -528,7 +528,7 @@ const CONTENTS=[
   sub:{ko:"전주에서 시작된 두 왕조의 이야기를 걷는 역사 이머시브",en:"Walk through the story of two dynasties born in Jeonju"},
   c1:"#6B1E0E",c2:"#E8B44A",c3:"#B4471F",prices:PRICES(26000,22000,18000),period:"2026-12-01 ~ 2027-06-30",goods:["g3","g2"],fnb:["f2"],
   points:{ko:["후백제·조선 건국 서사를 5개 장으로 구성","한옥마을 도보 연계 동선","외국어 자막 4개 언어 지원"],en:["Five chapters from Hubaekje to Joseon","Connected to the Hanok Village walk","Subtitles in 4 languages"]}},
- {id:"hanok",region:"jeonju",cat:"night",tags:["couple","friends"],type:"anytime",dur:40,rating:4.6,rev:41,pop:80,isNew:false,
+ {id:"hanok",img:"img/hanok.jpg",imgPos:"72% 50%",region:"jeonju",cat:"night",tags:["couple","friends"],type:"anytime",dur:40,rating:4.6,rev:41,pop:80,isNew:false,
   title:{ko:"한옥 나이트 미디어워크",en:"Hanok Night Media Walk",ja:"韓屋ナイトメディアウォーク",zh:"韩屋夜间媒体漫步"},eng:"HANOK NIGHT WALK",
   sub:{ko:"해가 진 한옥마을 골목에 펼쳐지는 빛의 산책",en:"A walk of light through Hanok Village at night"},
   c1:"#24215E",c2:"#FF9F6B",c3:"#4F46E5",prices:PRICES(15000,12000,9000),period:"2026-11-01 ~ 2027-04-30",goods:["g3"],fnb:["f2"],
@@ -538,7 +538,7 @@ const CONTENTS=[
   sub:{ko:"신라의 피리 설화를 소리와 빛으로 다시 쓴 울산 대표 이머시브",en:"The Silla legend of the magic flute, retold in sound and light"},
   c1:"#0A3D62",c2:"#9BE7FF",c3:"#1E6FA8",prices:PRICES(24000,20000,16000),period:"2026-11-15 ~ 2027-05-31",goods:["g4"],fnb:["f3"],
   points:{ko:["360도 공간 음향","관람객이 직접 피리를 부는 인터랙션","회차당 정원 50명"],en:["360° spatial sound","Play the flute yourself","50 visitors per slot"]}},
- {id:"prism",region:"ulsan",cat:"experience",tags:["family","friends"],type:"slot",dur:45,rating:4.5,rev:37,pop:76,isNew:true,
+ {id:"prism",img:"img/prism.jpg",imgPos:"50% 50%",region:"ulsan",cat:"experience",tags:["family","friends"],type:"slot",dur:45,rating:4.5,rev:37,pop:76,isNew:true,
   title:{ko:"PRISM 라이트 랩",en:"PRISM Light Lab",ja:"PRISMライトラボ",zh:"PRISM光影实验室"},eng:"PRISM LIGHT LAB",
   sub:{ko:"빛을 쪼개고 섞어 나만의 색을 만드는 체험 랩",en:"Split and mix light to make your own colour"},
   c1:"#3B1C7A",c2:"#FF6FB5",c3:"#7C3AED",prices:PRICES(18000,15000,12000),period:"2026-11-15 ~ 2027-05-31",goods:["g5"],fnb:["f3"],
@@ -548,19 +548,19 @@ const GOODS=[
  {id:"g1",kind:"goods",region:"seoul",name:{ko:"루멘 포토카드 세트 (8종)",en:"LUMEN photo card set (8)"},p:12000,c1:"#16307A",c2:"#F2C14E",opts:null,content:"lumen"},
  {id:"g2",kind:"goods",region:"all",name:{ko:"AXI PLAY 에코백",en:"AXI PLAY tote bag"},p:18000,c1:"#17191E",c2:"#2160F3",opts:[{ko:"아이보리",en:"Ivory"},{ko:"블랙",en:"Black"}],content:null},
  {id:"g3",kind:"goods",region:"jeonju",name:{ko:"왕의 도시 엽서북",en:"City of Kings postcard book"},p:9000,c1:"#6B1E0E",c2:"#E8B44A",opts:null,content:"king"},
- {id:"g4",kind:"goods",region:"ulsan",name:{ko:"만파식적 피리 키링",en:"Manpasikjeok flute keyring"},p:8500,c1:"#0A3D62",c2:"#9BE7FF",opts:[{ko:"골드",en:"Gold"},{ko:"실버",en:"Silver"}],content:"manpa"},
+ {id:"g4",img:"img/manpa-goods.jpg",imgPos:"20% 55%",kind:"goods",region:"ulsan",name:{ko:"만파식적 피리 키링",en:"Manpasikjeok flute keyring"},p:8500,c1:"#0A3D62",c2:"#9BE7FF",opts:[{ko:"골드",en:"Gold"},{ko:"실버",en:"Silver"}],content:"manpa"},
  {id:"g5",kind:"goods",region:"ulsan",name:{ko:"PRISM 스티커팩",en:"PRISM sticker pack"},p:5000,c1:"#3B1C7A",c2:"#FF6FB5",opts:null,content:"prism"}
 ];
 const FNB=[
  {id:"f1",kind:"fnb",region:"seoul",name:{ko:"루멘 시그니처 에이드",en:"LUMEN signature ade"},p:6500,c1:"#F2C14E",c2:"#16307A"},
  {id:"f2",kind:"fnb",region:"jeonju",name:{ko:"한옥 쌍화 라떼",en:"Hanok herbal latte"},p:6000,c1:"#B4471F",c2:"#F4E1C1"},
- {id:"f3",kind:"fnb",region:"ulsan",name:{ko:"바다 소금빵 세트",en:"Sea-salt bread set"},p:7500,c1:"#9BE7FF",c2:"#0A3D62"},
+ {id:"f3",img:"img/manpa-goods.jpg",imgPos:"58% 70%",kind:"fnb",region:"ulsan",name:{ko:"바다 소금빵 세트",en:"Sea-salt bread set"},p:7500,c1:"#9BE7FF",c2:"#0A3D62"},
  {id:"f4",kind:"fnb",region:"seoul",name:{ko:"딥블루 젤리 소다",en:"Deep Blue jelly soda"},p:5500,c1:"#3EE6C1",c2:"#063B4C"}
 ];
 const PKGS=[
  {id:"p1",kind:"pkg",region:"seoul",name:{ko:"루멘 입장권 + 포토카드 세트",en:"LUMEN ticket + photo cards"},p:32000,list:36000,c1:"#16307A",c2:"#F2C14E",content:"lumen",
   incl:{ko:["루멘 서울 성인 1매 (회차 지정)","포토카드 세트 현장 픽업"],en:["LUMEN SEOUL adult x1 (timed)","Photo card set, pickup"]}},
- {id:"p2",kind:"pkg",region:"ulsan",name:{ko:"만파식적 입장권 + 키링 + 소금빵",en:"Manpasikjeok + keyring + bread"},p:35000,list:40000,c1:"#0A3D62",c2:"#9BE7FF",content:"manpa",
+ {id:"p2",img:"img/manpa-goods.jpg",imgPos:"45% 50%",kind:"pkg",region:"ulsan",name:{ko:"만파식적 입장권 + 키링 + 소금빵",en:"Manpasikjeok + keyring + bread"},p:35000,list:40000,c1:"#0A3D62",c2:"#9BE7FF",content:"manpa",
   incl:{ko:["만파식적 성인 1매 (회차 지정)","피리 키링 현장 픽업","바다 소금빵 세트 현장 교환"],en:["Manpasikjeok adult x1 (timed)","Flute keyring, pickup","Sea-salt bread set"]}},
  {id:"p3",kind:"pkg",region:"all",name:{ko:"3도시 패스 (서울·전주·울산)",en:"3-City Pass (Seoul·Jeonju·Ulsan)"},p:59000,list:74000,c1:"#2160F3",c2:"#FFFFFF",content:null,
   incl:{ko:["루멘 서울 · 왕의 도시 · 만파식적 성인 각 1회","구매일로부터 90일 내 사용","회차는 사용 전 내티켓에서 지정"],en:["One adult entry each: LUMEN, City of Kings, Manpasikjeok","Use within 90 days","Book each slot in My Tickets"]}}
@@ -620,6 +620,7 @@ function posterHTML(o,{region=true,big=false}={}){
     <div class="p-title" style="${big?"font-size:28px":""}"><span class="p-eng">${esc(o.eng||"")}</span>${esc(L(o.title))}</div>
   </div>`}
 function gthumbHTML(p,size=""){
+  if(p.img)return `<div class="gthumb" style="background:${p.c1}${size}"><img src="${p.img}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${p.imgPos||"50% 50%"}"></div>`;
   return `<div class="gthumb" style="background:${p.c1}${size}">
    <span style="position:absolute;width:60%;height:60%;border-radius:50%;border:2px solid ${p.c2};opacity:.8"></span>
    <span style="position:absolute;width:22%;height:22%;border-radius:50%;background:${p.c2};right:16%;top:16%"></span>
